@@ -1,12 +1,14 @@
 ---
 import Icon, { Props as IconProps } from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+import { LanguageSelector } from "astro-i18next/components";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work/" },
-  { label: "About", href: "/about/" }
+  // { label: "Article", href: "/article/"},
+  { label: "Experience", href: "/experience/" }
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -81,6 +83,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 
       <div class="theme-toggle">
         <ThemeToggle />
+        <!-- <LanguageSelector showFlag={true} class="menu-button" /> -->
       </div>
     </div>
   </div>

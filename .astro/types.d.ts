@@ -101,31 +101,47 @@ declare module 'astro:content' {
 	>;
 
 	const entryMap: {
-		"work": {
-"bloom-box.md": {
-  id: "bloom-box.md",
-  slug: "bloom-box",
+		"article": {
+"002.md": {
+  id: "002.md",
+  slug: "002",
+  body: string,
+  collection: "article",
+  data: InferEntrySchema<"article">
+} & { render(): Render[".md"] },
+"nested/001.md": {
+  id: "nested/001.md",
+  slug: "nested/001",
+  body: string,
+  collection: "article",
+  data: InferEntrySchema<"article">
+} & { render(): Render[".md"] },
+},
+"work": {
+"indoor-map.md": {
+  id: "indoor-map.md",
+  slug: "indoor-map",
   body: string,
   collection: "work",
   data: InferEntrySchema<"work">
 } & { render(): Render[".md"] },
-"h20.md": {
-  id: "h20.md",
-  slug: "h20",
+"loopback-io.md": {
+  id: "loopback-io.md",
+  slug: "loopback-io",
   body: string,
   collection: "work",
   data: InferEntrySchema<"work">
 } & { render(): Render[".md"] },
-"markdown-mystery-tour.md": {
-  id: "markdown-mystery-tour.md",
-  slug: "markdown-mystery-tour",
+"nested/vibe-canvas.md": {
+  id: "nested/vibe-canvas.md",
+  slug: "nested/vibe-canvas",
   body: string,
   collection: "work",
   data: InferEntrySchema<"work">
 } & { render(): Render[".md"] },
-"nested/duvet-genius.md": {
-  id: "nested/duvet-genius.md",
-  slug: "nested/duvet-genius",
+"square.md": {
+  id: "square.md",
+  slug: "square",
   body: string,
   collection: "work",
   data: InferEntrySchema<"work">
