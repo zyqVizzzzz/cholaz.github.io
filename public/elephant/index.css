@@ -1,6 +1,6 @@
  @font-face {
    font-family: "MYSXT";
-   src: url("./mysxt.ttf");
+   src: url("./LXGW.ttf");
    font-weight: normal;
    font-style: normal;
  }
@@ -16,12 +16,17 @@
    font-style: normal;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   max-width: 593px;
+   width: 633px;
    margin: 0 auto;
  }
  #article{
   padding: 3em 1em;
   box-sizing: border-box;
+  width: 100%;
+ }
+ article{
+  width: 100%;
+  margin-bottom: 30px;
  }
  header{
   margin-bottom: 2em;
@@ -37,6 +42,8 @@
  h3{
   font-size: 1.5em;
   font-weight: 400;
+  margin-bottom: 15px;
+  margin-top: 15px;
  }
  h4{
   font-size: 1em;
@@ -46,7 +53,56 @@
   padding: 2px 0px;
  }
  p{
-  width: 593px;
+  width: 100%;
   margin: 15px 0;
   line-height: 1.5;
+ }
+ aside{
+  width: 100%;
+  border-radius: 4px;
+  background-color: rgb(241, 241, 239);
+  padding: 24px 16px 16px 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+ }
+ .aside-title{
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  color: rgba(212, 76, 71, 0.4);
+  font-size: 2em;
+  z-index: 1;
+  font-weight: 600;
+ }
+ .aside-para{
+    word-break: break-all;
+    width: 94%;
+    z-index: 2;
+    margin: 8px 0;
+ }
+ ul{}
+ li{
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  margin-left: -100px;
+ }
+ li p{
+  margin-top: 0;
+ }
+ p.label{
+  width: 100px;
+  float: right;
+  /* margin: 0 0 0 -200px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+ }
+ p.para{
+  display: inline-block;
+  margin-left: 100px;
  }
