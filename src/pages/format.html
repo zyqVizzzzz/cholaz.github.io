@@ -1,18 +1,1090 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/fullpage/fullpage.min.css" />
+    <link rel="stylesheet" href="/fullpage/animate.min.css" />
   </head>
   <body>
-    <div
-      class="headline"
-      data-scroll-reveal="enter left and move 50px over 1.33s"
-    >
-      hello
+    <div id="fullpage">
+      <div class="section">
+        <div class="hero">
+          <div class="hero-left large-header" id="large-header">
+            <canvas
+              id="demo-canvas"
+              style="width: 50vw; height: 50vh; margin-top: -55%"
+            ></canvas>
+            <div class="hero-content">
+              <div
+                class="hero-left__title wow fadeInLeft"
+                style="animation-name: fadeInLeft"
+                data-wow-duration="2s"
+                data-wow-delay="0s"
+              >
+                From King to Exile to King Again
+              </div>
+              <div
+                class="hero-left__para wow fadeInLeft"
+                style="animation-name: fadeInLeft"
+                data-wow-duration="2s"
+                data-wow-delay="0s"
+              >
+                In a series of events that have sent shockwaves through the tech
+                world, Sam Altman, the founder and CEO of OpenAI, was recently
+                fired from the company, only to make a remarkable comeback. This
+                report delves into the rollercoaster of events that unfolded at
+                OpenAI, highlighting the complexities and internal dynamics of
+                one of the most influential companies in the AI sector.
+              </div>
+            </div>
+          </div>
+          <div
+            class="hero-right wow fadeInRight"
+            style="animation-name: fadeInRight"
+            data-wow-duration="2s"
+            data-wow-delay="0.5s"
+          >
+            picture
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="vp">
+          <div class="vp-left">
+            <ul class="timeline">
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p
+                    class="timeline-event-thumbnail wow fadeInLeft"
+                    style="animation-name: fadeInLeft"
+                    data-wow-duration="2s"
+                    data-wow-delay="1s"
+                  >
+                    November 17th - Friday
+                  </p>
+                  <h3
+                    class="wow fadeInLeft"
+                    style="animation-name: fadeInLeft"
+                    data-wow-duration="2s"
+                    data-wow-delay="1.5s"
+                  >
+                    The Firing of Sam Altman
+                  </h3>
+                  <p
+                    class="wow fadeInLeft"
+                    style="animation-name: fadeInLeft"
+                    data-wow-duration="2s"
+                    data-wow-delay="2s"
+                  >
+                    On Friday, November 17th, at 12:19 PM, the OpenAI board
+                    delivered a shocking message to Sam Altman in the absence of
+                    Greg Brockman, the president of OpenAI, stating, "<strong
+                      style="font-size: 1.2em"
+                      >You're fired.</strong
+                    >" The meeting abruptly ended.
+                  </p>
+                  <p
+                    class="wow fadeInLeft"
+                    style="animation-name: fadeInLeft"
+                    data-wow-duration="2s"
+                    data-wow-delay="2s"
+                  >
+                    Minutes later, Greg Brockman received a Google Meet video
+                    call request from Ilya Sutskever. At 12:23 PM, a conference
+                    call began, announcing Brockman's removal from the board but
+                    his retention as president. The swift and precise execution
+                    of these actions indicated a premeditated move with no
+                    hesitation or protracted discussions.
+                  </p>
+                  <p
+                    class="wow fadeInLeft"
+                    style="animation-name: fadeInLeft"
+                    data-wow-duration="2s"
+                    data-wow-delay="2s"
+                  >
+                    Rumors circulated that Sutskever, a co-founder and Chief
+                    Scientist at OpenAI, was the mastermind behind a coup,
+                    secretly aligning with three independent directors to
+                    decisively vote 4:2 in favor of ousting Altman. OpenAI's
+                    official website promptly announced changes in leadership,
+                    with a cautious and vague statement. The statement suggested
+                    that Altman's communication lacked transparency, hindering
+                    the board's ability to fulfill its duties and eroding
+                    confidence in his leadership.
+                  </p>
+                  <p
+                    class="wow fadeInLeft"
+                    style="animation-name: fadeInLeft"
+                    data-wow-duration="2s"
+                    data-wow-delay="2s"
+                  >
+                    Simultaneously, OpenAI informed its major investor,
+                    Microsoft, of the leadership changes. Microsoft CEO Satya
+                    Nadella and other executives learned of this news just 5 to
+                    10 minutes before the announcement, leaving them surprised.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="vp-right">
+            <div
+              class="video-wrap wow fadeInRight"
+              style="animation-name: fadeInRight"
+              data-wow-duration="2s"
+              data-wow-delay="1s"
+            >
+              <video autoplay loop muted class="bgvid" id="bgvid">
+                <source src="/fullpage/hello.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="tp">
+          <div class="tp-left">
+            <ul class="timeline">
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p
+                    class="timeline-event-thumbnail wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1s"
+                  >
+                    November 17th - Friday
+                  </p>
+                  <h3
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="1s"
+                    data-wow-delay="1.5s"
+                  >
+                    Inside Story and Big Twist
+                  </h3>
+                  <p
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="1s"
+                    data-wow-delay="2s"
+                  >
+                    On Friday, November 17th, at 2 PM, OpenAI held an all-hands
+                    meeting to reassure employees and announced that CTO Murati
+                    would serve as interim CEO. However, Altman's departure was
+                    not without resistance. OpenAI's shareholders, including
+                    Airbnb CEO Brian Chesky and SV Angel founder Ron Conway,
+                    publicly voiced their support for Altman and Brockman.
+                  </p>
+                  <p
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="1s"
+                    data-wow-delay="2s"
+                  >
+                    On Sunday, November 19th, in the morning, Altman and
+                    Brockman negotiated at OpenAI's San Francisco headquarters.
+                    The outcome of the negotiations was the appointment of
+                    Emmett Shear as CEO, not Altman. In the evening, OpenAI
+                    employees penned a strongly-worded open letter, threatening
+                    to resign and follow Altman and Brockman to Microsoft unless
+                    the board resigned and reinstated them.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tp-right">
+            <div class="tp-wrap"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="tp">
+          <div class="tp-left">
+            <ul class="timeline">
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p
+                    class="timeline-event-thumbnail wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1s"
+                  >
+                    April 2011 - heute
+                  </p>
+                  <h3
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1.5s"
+                  >
+                    Sam Altman Joins Microsoft
+                  </h3>
+                  <p
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="2s"
+                  >
+                    On Monday, November 20th, in the afternoon, Satya Nadella
+                    explicitly expressed his welcome to Altman, Brockman, and
+                    other OpenAI employees on a media program, and announced
+                    that Microsoft had prepared laptops and GPU clusters at
+                    their LinkedIn office in San Francisco. However, due to
+                    ongoing negotiations between the board and OpenAI
+                    leadership, there were still no OpenAI employees at the
+                    office. It was understood that Microsoft's preference was
+                    for Altman to return as CEO to OpenAI.
+                  </p>
+                  <p
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="2s"
+                  >
+                    At midnight, Nadella officially tweeted the announcement of
+                    Altman joining Microsoft
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tp-right">
+            <div class="dp-wrap"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="paper">
+          <div class="paper-left">
+            <ul class="timeline">
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p
+                    class="timeline-event-thumbnail wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="0s"
+                  >
+                    April 2011 - heute
+                  </p>
+                  <h3
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1s"
+                  >
+                    Employees Force the Board of Directors
+                  </h3>
+                  <p
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1.5s"
+                  >
+                    Around 2 AM on November 21st, OpenAI's top management
+                    extended an olive branch to Altman, stating, "OpenAI Is
+                    Nothing Without Its People" Altman retweeted some of these
+                    messages, expressing support with heart emojis. The
+                    employees' emotions reached a new peak, and the most
+                    astonishing twist was that Ilya Sutskever, the main planner
+                    of the coup, reversed his stance. At 5 AM, Sutskever posted
+                    on X expressing regret for Altman's dismissal. Altman
+                    retweeted this post and added three heart emojis.
+                  </p>
+                  <p
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1.5s"
+                  >
+                    Even at this point, interim CEO Shear threatened that if the
+                    board couldn't clearly communicate the reasons for Altman's
+                    dismissal, he would no longer serve as CEO.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="paper-right">
+            <div class="paper-wrap">
+              <div
+                class="paper-bg pb1 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="0.5s"
+              ></div>
+              <div
+                class="paper-bg pb2 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="1s"
+              ></div>
+              <div
+                class="paper-bg pb3 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="1.5s"
+              ></div>
+              <div
+                class="paper-bg pb4 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="2s"
+              ></div>
+              <div
+                class="paper-bg pb5 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="2.3s"
+              ></div>
+              <div
+                class="paper-bg pb6 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="2.6s"
+              ></div>
+              <div
+                class="paper-bg pb7 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="2.8s"
+              ></div>
+              <div
+                class="paper-bg pb8 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="3.0s"
+              ></div>
+              <div
+                class="paper-bg pb9 wow fadeInRightBig"
+                style="animation-name: fadeInRightBig"
+                data-wow-duration="0.5s"
+                data-wow-delay="3.2s"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="twitter">
+          <div class="twitter-left">
+            <ul class="timeline wow fadeInDown">
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p
+                    class="timeline-event-thumbnail wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="0s"
+                  >
+                    April 2011 - heute
+                  </p>
+                  <h3
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1s"
+                  >
+                    Sam Altman's Return and Board Shakeup
+                  </h3>
+                  <p
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1.5s"
+                  >
+                    "We have reached a preliminary agreement for Altman to
+                    return as the CEO of OpenAI." As a prerequisite for Altman's
+                    return, the board underwent a major reshuffle.
+                  </p>
+                  <p
+                    class="wow fadeInDown"
+                    style="animation-name: fadeInDown"
+                    data-wow-duration="0.5s"
+                    data-wow-delay="1.5s"
+                  >
+                    New board members included Bret Taylor, former Salesforce
+                    Co-CEO and current Facebook CTO responsible for long-term
+                    technical development and overseeing the development of News
+                    Feed, Search, and the Facebook platform. Larry Summers,
+                    former U.S. Treasury Secretary, also joined the board.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="twitter-right">
+            <div class="twitter-wrap">
+              <div
+                class="twitter-wrap_x x1 wow fadeInDown"
+                style="animation-name: fadeInDown"
+                data-wow-duration="0.5s"
+                data-wow-delay="1.5s"
+              >
+                <blockquote class="twitter-tweet">
+                  <p lang="en" dir="ltr">
+                    We have reached an agreement in principle for Sam Altman to
+                    return to OpenAI as CEO with a new initial board of Bret
+                    Taylor (Chair), Larry Summers, and Adam D&#39;Angelo.<br /><br />We
+                    are collaborating to figure out the details. Thank you so
+                    much for your patience through this.
+                  </p>
+                  &mdash; OpenAI (@OpenAI)
+                  <a
+                    href="https://twitter.com/OpenAI/status/1727206187077370115?ref_src=twsrc%5Etfw"
+                    >November 22, 2023</a
+                  >
+                </blockquote>
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charset="utf-8"
+                ></script>
+              </div>
+              <div
+                class="twitter-wrap_x x2 wow fadeInDown"
+                style="animation-name: fadeInDown"
+                data-wow-duration="0.5s"
+                data-wow-delay="1.5s"
+              >
+                <blockquote class="twitter-tweet">
+                  <p lang="en" dir="ltr">
+                    i love openai, and everything i’ve done over the past few
+                    days has been in service of keeping this team and its
+                    mission together. when i decided to join msft on sun
+                    evening, it was clear that was the best path for me and the
+                    team. with the new board and w satya’s support, i’m…
+                  </p>
+                  &mdash; Sam Altman (@sama)
+                  <a
+                    href="https://twitter.com/sama/status/1727207458324848883?ref_src=twsrc%5Etfw"
+                    >November 22, 2023</a
+                  >
+                </blockquote>
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charset="utf-8"
+                ></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section brand">
+        <div class="brand-wrap">
+          <h3
+            class="wow fadeInDown"
+            style="animation-name: fadeInDown"
+            data-wow-duration="0.5s"
+            data-wow-delay="1s"
+          >
+            Conclusion
+          </h3>
+          <p
+            class="wow fadeInDown"
+            style="animation-name: fadeInDown"
+            data-wow-duration="0.5s"
+            data-wow-delay="1.5s"
+          >
+            Since its inception, the company has oscillated between its
+            non-profit ideals and profit-seeking endeavors. While adhering to
+            effective altruism to create a positive societal impact, OpenAI had
+            to abandon its purely non-profit model and introduce capital and
+            profit elements to stay technologically competitive.
+          </p>
+          <p
+            class="wow fadeInDown"
+            style="animation-name: fadeInDown"
+            data-wow-duration="0.5s"
+            data-wow-delay="1.5s"
+          >
+            The dual nature of the company's structure became evident in the
+            disagreements between Altman and Sutskever: on one side, the pursuit
+            of expansion and technological advancement, and on the other, a deep
+            concern for safety. Over time, these differences led to a loss of
+            trust, ultimately culminating in an internal revolution upon the
+            anniversary of ChatGPT's release.
+          </p>
+          <p
+            class="wow fadeInDown"
+            style="animation-name: fadeInDown"
+            data-wow-duration="0.5s"
+            data-wow-delay="1.5s"
+          >
+            Altman's return seems to signify that OpenAI's original non-profit
+            vision has come to an end, and the company is evolving towards
+            becoming a corporate giant. In this AI-driven future, how OpenAI and
+            other tech companies will shape our world remains to be observed.
+          </p>
+        </div>
+      </div>
     </div>
 
+    <style>
+      .wow {
+        visibility: hidden;
+      }
+      .hero {
+        height: 100vh;
+        display: flex;
+      }
+      .hero-left,
+      .hero-right {
+        width: 50%;
+      }
+      .hero-left {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center center;
+        z-index: 1;
+      }
+      .hero-right {
+        background-image: url(./ground/assets/pic1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        -webkit-transform: translate3d(-20%, -50%, 0);
+        transform: translate3d(-20%, -50%, 0);
+      }
+      .hero-left__title {
+        /* padding: 0em 13em; */
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-top: -5em;
+        padding: 0 2em 0 1em;
+        box-sizing: border-box;
+        background: #222;
+        color: #fff;
+        display: inline-block;
+      }
+      .hero-left__para {
+        font-size: 1.3em;
+        margin-top: 2em;
+      }
+      .hero-left__desc {
+        text-align: center;
+        margin-top: 40vh;
+      }
+      .section-left {
+      }
+      .section-right {
+      }
+
+      .vp {
+        height: 100vh;
+        display: flex;
+      }
+      .vp-left,
+      .vp-right {
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .vp-left {
+        justify-content: center;
+      }
+      .video-wrap {
+        width: 80%;
+        height: 50%;
+        /* background: ; */
+        position: relative;
+      }
+      .tp {
+        height: 100vh;
+        display: flex;
+      }
+      .tp-left,
+      .tp-right {
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .tp-left {
+        justify-content: center;
+      }
+      .tp-wrap {
+        width: 80%;
+        height: 50%;
+        /* background: ; */
+        position: relative;
+
+        background-image: url(./ground/assets/pic3.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .dp-wrap {
+        width: 80%;
+        height: 50%;
+        /* background: ; */
+        position: relative;
+
+        background-image: url(./ground/assets/pic2.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .paper {
+        height: 100vh;
+        display: flex;
+      }
+      .paper-left,
+      .paper-right {
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .paper-wrap {
+        width: 80%;
+        height: 80%;
+        position: relative;
+      }
+      .paper-bg {
+        width: 600px;
+        height: 120px;
+        position: absolute;
+      }
+      .pb1 {
+        top: 0;
+        left: 70px;
+        background: url(./ground/assets/paper1.png) no-repeat center/100%;
+      }
+      .pb2 {
+        top: 90px;
+        left: 20px;
+        background: url(./ground/assets/paper2.png) no-repeat center/100%;
+      }
+      .pb3 {
+        top: 180px;
+        left: 90px;
+        background: url(./ground/assets/paper3.png) no-repeat center/100%;
+      }
+      .pb4 {
+        top: 270px;
+        left: 30px;
+        background: url(./ground/assets/paper4.png) no-repeat center/100%;
+      }
+      .pb5 {
+        top: 360px;
+        left: 80px;
+        background: url(./ground/assets/paper5.png) no-repeat center/100%;
+      }
+      .pb6 {
+        top: 450px;
+        left: 0px;
+        background: url(./ground/assets/paper6.png) no-repeat center/100%;
+      }
+      .pb7 {
+        top: 540px;
+        left: 100px;
+        background: url(./ground/assets/paper7.png) no-repeat center/100%;
+      }
+      .pb8 {
+        top: 630px;
+        left: 60px;
+        background: url(./ground/assets/paper8.png) no-repeat center/100%;
+      }
+      .pb9 {
+        top: 720px;
+        left: 30px;
+        background: url(./ground/assets/paper9.png) no-repeat center/100%;
+      }
+
+      .twitter {
+        height: 100vh;
+        display: flex;
+      }
+      .twitter-left,
+      .twitter-right {
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .twitter-wrap {
+        width: 80%;
+        height: 80%;
+        /* background: violet; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+      }
+
+      .bg-1 {
+        background-image: url(./ground/assets/pic2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      video {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: 500px;
+        /*加滤镜*/
+        /* filter: blur(15px); */
+        /* -webkit-filter: grayscale(100%);
+        filter: grayscale(100%); */
+        z-index: -11;
+      }
+      source {
+        /* min-width: 100%;
+        min-height: 100%; */
+        height: auto;
+        width: 500px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .brand-wrap {
+        width: 50vw;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      /* Variables */
+      /* Fonts */
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);
+      body {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+      }
+
+      ::marker {
+        color: red;
+      }
+
+      /* Layout */
+      * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      /* Styling */
+      .timeline {
+        margin: 4em auto;
+        position: relative;
+        max-width: 46em;
+        list-style-type: none;
+      }
+      .timeline:before {
+        background-color: black;
+        content: "";
+        margin-left: -1px;
+        position: absolute;
+        top: 0;
+        left: 4.5em;
+        width: 2px;
+        height: 90%;
+      }
+
+      .timeline-event {
+        position: relative;
+      }
+      .timeline-event:hover .timeline-event-icon {
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        background-color: #a83279;
+      }
+      .timeline-event:hover .timeline-event-thumbnail {
+        -moz-box-shadow: inset 40em 0 0 0 #a83279;
+        -webkit-box-shadow: inset 40em 0 0 0 #a83279;
+        box-shadow: inset 40em 0 0 0 #a83279;
+      }
+
+      .timeline-event-copy {
+        padding: 2em;
+        position: relative;
+        top: -1.875em;
+        left: 4em;
+        width: 80%;
+      }
+      .timeline-event-copy h3 {
+        font-size: 1.75em;
+      }
+      h3 {
+        font-size: 1.75em;
+      }
+      .timeline-event-copy h4 {
+        font-size: 1.2em;
+        margin-bottom: 1.2em;
+      }
+      .timeline-event-copy strong {
+        font-weight: 700;
+      }
+      .timeline-event-copy p:not(.timeline-event-thumbnail) {
+        padding-bottom: 1.2em;
+      }
+
+      .timeline-event-icon {
+        -moz-transition: -moz-transform 0.2s ease-in;
+        -o-transition: -o-transform 0.2s ease-in;
+        -webkit-transition: -webkit-transform 0.2s ease-in;
+        transition: transform 0.2s ease-in;
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background-color: black;
+        outline: 10px solid white;
+        display: block;
+        margin: 0.5em 0.5em 0.5em -0.5em;
+        position: absolute;
+        top: 0;
+        left: 2em;
+        width: 1em;
+        height: 1em;
+      }
+
+      .timeline-event-thumbnail {
+        -moz-transition: box-shadow 0.5s ease-in 0.1s;
+        -o-transition: box-shadow 0.5s ease-in 0.1s;
+        -webkit-transition: box-shadow 0.5s ease-in;
+        -webkit-transition-delay: 0.1s;
+        transition: box-shadow 0.5s ease-in 0.1s;
+        color: white;
+        font-size: 0.75em;
+        background-color: black;
+        -moz-box-shadow: inset 0 0 0 0em #ef795a;
+        -webkit-box-shadow: inset 0 0 0 0em #ef795a;
+        box-shadow: inset 0 0 0 0em #ef795a;
+        display: inline-block;
+        margin-top: 0.2em;
+        margin-bottom: 1.2em;
+        padding: 0.25em 1em 0.2em 1em;
+      }
+
+      .section {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <script is:inline src="/fullpage/wow.min.js"></script>
+    <script is:inline src="/fullpage/EasePack.min.js"></script>
+    <script
+      type="text/javascript"
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      is:inline
+      src="/fullpage/fullpage.js"
+    ></script>
     <script>
-      ScrollReveal().reveal(".headline");
+      (function () {
+        new WOW().init();
+        new fullpage("#fullpage", {
+          //options here
+          autoScrolling: true,
+          scrollHorizontally: true,
+          scrollBar: true
+        });
+        var width,
+          height,
+          largeHeader,
+          canvas,
+          ctx,
+          points,
+          target,
+          animateHeader = true;
+
+        // Main
+        initHeader();
+        initAnimation();
+
+        function initHeader() {
+          width = window.innerWidth;
+          height = window.innerHeight;
+          target = { x: width / 2, y: height / 2 };
+
+          largeHeader = document.getElementById("large-header");
+          largeHeader.style.height = height + "px";
+
+          canvas = document.getElementById("demo-canvas");
+          canvas.width = width;
+          canvas.height = height;
+          ctx = canvas.getContext("2d");
+
+          // create points
+          points = [];
+          for (var x = 0; x < width; x = x + width / 20) {
+            for (var y = 0; y < height; y = y + height / 20) {
+              var px = x + (Math.random() * width) / 20;
+              var py = y + (Math.random() * height) / 20;
+              var p = { x: px, originX: px, y: py, originY: py };
+              points.push(p);
+            }
+          }
+
+          // for each point find the 5 closest points
+          for (var i = 0; i < points.length; i++) {
+            var closest = [];
+            var p1 = points[i];
+            for (var j = 0; j < points.length; j++) {
+              var p2 = points[j];
+              if (!(p1 == p2)) {
+                var placed = false;
+                for (var k = 0; k < 5; k++) {
+                  if (!placed) {
+                    if (closest[k] == undefined) {
+                      closest[k] = p2;
+                      placed = true;
+                    }
+                  }
+                }
+
+                for (var k = 0; k < 5; k++) {
+                  if (!placed) {
+                    if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                      closest[k] = p2;
+                      placed = true;
+                    }
+                  }
+                }
+              }
+            }
+            p1.closest = closest;
+          }
+
+          // assign a circle to each point
+          for (var i in points) {
+            var c = new Circle(
+              points[i],
+              2 + Math.random() * 10,
+              "rgba(255,255,255,0.5)"
+            );
+            points[i].circle = c;
+          }
+        }
+
+        // animation
+        function initAnimation() {
+          animate();
+          for (var i in points) {
+            shiftPoint(points[i]);
+          }
+        }
+
+        function animate() {
+          if (animateHeader) {
+            ctx.clearRect(0, 0, width, height);
+            for (var i in points) {
+              // detect points in range
+              if (Math.abs(getDistance(target, points[i])) < 4000) {
+                points[i].active = 0.3;
+                points[i].circle.active = 0.6;
+              } else if (Math.abs(getDistance(target, points[i])) < 20000) {
+                points[i].active = 0.1;
+                points[i].circle.active = 0.3;
+              } else if (Math.abs(getDistance(target, points[i])) < 40000) {
+                points[i].active = 0.02;
+                points[i].circle.active = 0.1;
+              } else {
+                points[i].active = 0;
+                points[i].circle.active = 0;
+              }
+
+              drawLines(points[i]);
+              points[i].circle.draw();
+            }
+          }
+          requestAnimationFrame(animate);
+        }
+
+        function shiftPoint(p) {
+          TweenLite.to(p, 1 + 1 * Math.random(), {
+            x: p.originX - 50 + Math.random() * 100,
+            y: p.originY - 50 + Math.random() * 100,
+            ease: Circ.easeInOut,
+            onComplete: function () {
+              shiftPoint(p);
+            }
+          });
+        }
+
+        // Canvas manipulation
+        function drawLines(p) {
+          if (!p.active) return;
+          for (var i in p.closest) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p.closest[i].x, p.closest[i].y);
+            ctx.strokeStyle = "rgba(0,0,0," + p.active + ")";
+            ctx.stroke();
+          }
+        }
+
+        function Circle(pos, rad, color) {
+          var _this = this;
+
+          // constructor
+          (function () {
+            _this.pos = pos || null;
+            _this.radius = rad || null;
+            _this.color = color || null;
+          })();
+
+          this.draw = function () {
+            if (!_this.active) return;
+            ctx.beginPath();
+            ctx.arc(
+              _this.pos.x,
+              _this.pos.y,
+              _this.radius,
+              0,
+              2 * Math.PI,
+              false
+            );
+            ctx.fillStyle = "rgba(0,0,0," + _this.active + ")";
+            ctx.fill();
+          };
+        }
+
+        // Util
+        function getDistance(p1, p2) {
+          return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+        }
+      })();
     </script>
   </body>
 </html>
