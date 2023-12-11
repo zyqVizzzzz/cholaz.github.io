@@ -7,11 +7,10 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/public/fullpage/fullpage.min.css"
+      href="/fullpage/fullpage.min.css"
     />
-    <script is:inline src="/public/fullpage/easings.min.js"></script>
 
-    <script is:inline type="text/javascript" src="/public/fullpage/fullpage.js"
+    <script type="text/javascript" is:inline src="/fullpage/fullpage.js"
     ></script>
   </head>
   <body>
@@ -245,7 +244,40 @@
         margin-top: 0.2em;
         margin-bottom: 1.2em;
         padding: 0.25em 1em 0.2em 1em;
-      }
+      }* {
+      padding: 0;
+      margin: 0;
+    }
+    #main {
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      scroll-snap-type: y mandatory;
+    }
+    #main::-webkit-scrollbar {
+      width: 0;
+    }
+    #main div.section {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: start;
+    }
+
+    #main div.section:nth-child(1) {
+      /* background-color: pink; */
+    }
+
+    #main div.section:nth-child(2) {
+      /* background-color: blue; */
+    }
+
+    #main div.section:nth-child(3) {
+      /* background-color: green; */
+    }
+
     </style>
     <script>
       new fullpage("#fullpage", {
