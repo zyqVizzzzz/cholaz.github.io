@@ -5,10 +5,48 @@
    font-style: normal;
  }
 
+ *{
+  margin: 0;
+  padding: 0;
+ }
+
  body {
    position: relative;
    font-family: "MYSXT";
    font-style: normal;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+   max-width: 593px;
+   margin: 0 auto;
+ }
+ #article{
+  padding: 3em 1em;
+  box-sizing: border-box;
+ }
+ header{
+  margin-bottom: 2em;
+ }
+ h1{
+  font-size: 3em;
+  font-weight: 400;
+ }
+ h2{
+  font-size: 2em;
+  font-weight: 400;
+ }
+ h3{
+  font-size: 1.5em;
+  font-weight: 400;
+ }
+ h4{
+  font-size: 1em;
+  font-weight: 400;
+  background-color: rgba(251, 236, 221, 1);
+  display: inline-block;
+  padding: 2px 0px;
+ }
+ p{
+  width: 593px;
+  margin: 15px 0;
+  line-height: 1.5;
  }
