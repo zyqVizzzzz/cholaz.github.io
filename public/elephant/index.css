@@ -1,0 +1,14 @@
+ @font-face {
+   font-family: "MYSXT";
+   src: url("./mysxt.ttf");
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ body {
+   position: relative;
+   font-family: "MYSXT";
+   font-style: normal;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
