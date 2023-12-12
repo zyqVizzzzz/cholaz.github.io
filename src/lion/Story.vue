@@ -21,7 +21,7 @@
     <S19 v-if="parseInt(id) === 19" />
     <div class="pagination">
       <a v-if="id > 1" :href="`/lion/${id - 1}`">上一页</a>
-      <a href="/lion">目录</a>
+      <a href="/lion">返回目录</a>
       <a v-if="id < 19" :href="`/lion/${id + 1}`">下一页</a>
     </div>
   </main>
