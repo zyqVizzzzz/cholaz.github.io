@@ -1,0 +1,66 @@
+---
+const chapterList = [
+  { title: "世界观：儒家种姓制", tag: "world", path: "/lion/1" },
+  { title: "世界观：名士风潮", tag: "world", path: "/lion/2" },
+  { title: "前情提要：成名无望的士子", tag: "other", path: "/lion/3" },
+  { title: "第一章：活云", tag: "story", path: "/lion/4" },
+  { title: "第二章：钱神狂舞", tag: "story", path: "/lion/5" },
+  { title: "第三章：寺山水院", tag: "story", path: "/lion/6" },
+  { title: "第四章：好人吴坦尔", tag: "story", path: "/lion/7" },
+  { title: "世界观：四夷坊", tag: "world", path: "/lion/8" },
+  { title: "第五章：恶女花魁", tag: "story", path: "/lion/9" },
+  { title: "第六章：见龙卸甲", tag: "story", path: "/lion/10" },
+  { title: "世界观：司天台", tag: "world", path: "/lion/11" },
+  { title: "第七章：破空画影", tag: "story", path: "/lion/12" },
+  { title: "世界观：春深居", tag: "world", path: "/lion/13" },
+  { title: "第八章：月之暗面", tag: "story", path: "/lion/14" },
+  { title: "后记：未完待续", tag: "other", path: "/lion/15" },
+  { title: "人物手册", tag: "other", path: "/lion/16" },
+  { title: "世界观：瞳朦子", tag: "world", path: "/lion/17" },
+  { title: "世界观：水府流云图", tag: "world", path: "/lion/18" },
+  { title: "符咒游戏", tag: "other", path: "/lion/19" }
+]
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lion</title>
+    <link rel="stylesheet" href="/lion/index.css" />
+  </head>
+  <body>
+    <ul>
+      {chapterList.map(item => (
+        <li><a href={item.path}>{item.title}</a></li>
+      ))}
+    </ul>
+    <style lang="scss">
+      body, html {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: "SongTi SC";
+      }
+      ul{
+        height: 100vh;
+        font-weight: 800;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        li{
+          cursor: pointer;
+          text-decoration: underline;
+          line-height: 1.4;
+          margin-top: 8px;
+          list-style-type: none;
+        }
+      }
+      a{
+        text-decoration: none;
+        color: #000;
+      }
+    </style>
+  </body>
+</html>

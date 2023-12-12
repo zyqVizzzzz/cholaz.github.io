@@ -1,0 +1,253 @@
+<template>
+  <main class="story">
+    <S1 v-if="parseInt(id) === 1" />
+    <S2 v-if="parseInt(id) === 2" />
+    <S3 v-if="parseInt(id) === 3" />
+    <S4 v-if="parseInt(id) === 4" />
+    <S5 v-if="parseInt(id) === 5" />
+    <S6 v-if="parseInt(id) === 6" />
+    <S7 v-if="parseInt(id) === 7" />
+    <S8 v-if="parseInt(id) === 8" />
+    <S9 v-if="parseInt(id) === 9" />
+    <S10 v-if="parseInt(id) === 10" />
+    <S11 v-if="parseInt(id) === 11" />
+    <S12 v-if="parseInt(id) === 12" />
+    <S13 v-if="parseInt(id) === 13" />
+    <S14 v-if="parseInt(id) === 14" />
+    <S15 v-if="parseInt(id) === 15" />
+    <S16 v-if="parseInt(id) === 16" />
+    <S17 v-if="parseInt(id) === 17" />
+    <S18 v-if="parseInt(id) === 18" />
+    <S19 v-if="parseInt(id) === 19" />
+    <div class="pagination">
+      <a v-if="id > 1" :href="`/lion/${id - 1}`">上一页</a>
+      <a href="/lion">目录</a>
+      <a v-if="id < 19" :href="`/lion/${id + 1}`">下一页</a>
+    </div>
+  </main>
+</template>
+
+<script setup>
+import S1 from "./setup/S1.vue";
+import S2 from "./setup/S2.vue";
+import S3 from "./setup/S3.vue";
+import S4 from "./setup/S4.vue";
+import S5 from "./setup/S5.vue";
+import S6 from "./setup/S6.vue";
+import S7 from "./setup/S7.vue";
+import S8 from "./setup/S8.vue";
+import S9 from "./setup/S9.vue";
+import S10 from "./setup/S10.vue";
+import S11 from "./setup/S11.vue";
+import S12 from "./setup/S12.vue";
+import S13 from "./setup/S13.vue";
+import S14 from "./setup/S14.vue";
+import S15 from "./setup/S15.vue";
+import S16 from "./setup/S16.vue";
+import S17 from "./setup/S17.vue";
+import S18 from "./setup/S18.vue";
+import S19 from "./setup/S19.vue";
+import { ref, reactive } from "vue";
+const { id, title } = defineProps(["id", "title"]);
+</script>
+
+<style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "MYSXT";
+  src: url("./mysxt.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+main.story {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  left: 85px;
+  font-family: "SongTi SC";
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-align: justify;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  padding: 60px 0 0px;
+  box-sizing: border-box;
+  position: relative;
+
+  article {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .tip-group {
+    position: fixed;
+    font-family: "MYSXT";
+    top: 100px;
+    right: 50px;
+    width: 350px;
+    min-height: 100px;
+    color: rgba(45, 36, 63, 0.7);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: rgba(97, 46, 61, 0.2);
+    padding: 23px 16px 16px 12px;
+  }
+  .tip-title {
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+  .tip-para {
+    margin: 15px 0;
+  }
+
+  .pagination {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px auto;
+  }
+  .pagination > div {
+    position: absolute;
+  }
+  a {
+    color: #000;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin: 30px 0;
+    position: fixed;
+  }
+  h2 > div:first-child {
+    position: absolute;
+    top: -35px;
+    left: -180px;
+    width: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    color: rgba(97, 46, 61, 0.5);
+  }
+  h2 > div:last-child {
+    position: absolute;
+    top: 5px;
+    left: -150px;
+    width: 2.5rem;
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+  h2 > .story-h2 {
+    position: absolute;
+    top: -35px;
+    left: -150px;
+    width: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    color: rgba(97, 46, 61, 0.5);
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.3rem;
+    margin: 40px 0 15px;
+  }
+
+  a.mark {
+    color: inherit;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='%23612e3d80' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
+      bottom left/100% 0.3em no-repeat;
+    text-decoration: none;
+    padding-bottom: 0.3em;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1rem;
+    background-color: rgb(255, 190, 124);
+    display: inline-block;
+    margin: 10px -0.4em;
+    padding: 0.1em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      rgba(97, 46, 61, 0.05),
+      rgba(97, 46, 61, 0.5) 4%,
+      rgba(97, 46, 61, 0.2)
+    );
+    -webkit-box-decoration-break: clone;
+  }
+
+  p,
+  .p {
+    font-size: 1rem;
+    width: 100%;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  p.label {
+    margin: 12px 0;
+  }
+
+  span.tip {
+    font-family: KaiTi SC;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.95rem;
+  }
+
+  aside {
+    border-radius: 4px;
+    color: #2d243f;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: rgb(241, 241, 239);
+    padding: 26px 16px 13px 12px;
+    position: relative;
+    font-family: KaiTi SC;
+    margin: 35px 0;
+    &::before {
+      content: "“";
+      font-family: "MYSXT";
+      font-size: 2rem;
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      transform: translateY(-100%);
+      color: rgba(97, 46, 61, 0.3);
+    }
+    &::after {
+      content: "”";
+      font-family: "MYSXT";
+      font-size: 2rem;
+      position: absolute;
+      top: 50%;
+      right: -50px;
+      transform: translateY(50%);
+      color: rgba(97, 46, 61, 0.3);
+    }
+    .aside-title {
+      font-size: 1.7rem;
+      position: absolute;
+      letter-spacing: 1.5px;
+      top: -2px;
+      left: 15px;
+      color: rgba(97, 46, 61, 0.5);
+    }
+    .aside-para {
+      padding-left: 10px;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+</style>
