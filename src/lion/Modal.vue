@@ -66,7 +66,7 @@ export default {
 
 @font-face {
   font-family: "MYSXT";
-  src: url("./mysxt.ttf");
+  src: url("/lion/mysxt.ttf");
   font-weight: normal;
   font-style: normal;
 }

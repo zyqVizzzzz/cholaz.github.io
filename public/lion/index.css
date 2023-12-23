@@ -5,6 +5,20 @@
    font-style: normal;
  }
 
+ @font-face {
+   font-family: "LXGW";
+   src: url("./LXGW.ttf");
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ @font-face {
+   font-family: "JZXF";
+   src: url("./JZXF.ttf");
+   font-weight: normal;
+   font-style: normal;
+ }
+
  * {
    margin: 0;
    padding: 0;

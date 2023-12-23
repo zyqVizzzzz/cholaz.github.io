@@ -57,19 +57,19 @@ body {
 }
 @font-face {
   font-family: "MYSXT";
-  src: url("./mysxt.ttf");
+  src: url("/lion/mysxt.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "LXGW";
-  src: url("./LXGW.ttf");
+  src: url("/lion/LXGW.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "JZXF";
-  src: url("./JZXF.ttf");
+  src: url("/lion/JZXF.ttf");
   font-weight: normal;
   font-style: normal;
 }
