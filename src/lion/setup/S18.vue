@@ -76,5 +76,18 @@
       所以画画的过程就是这个故事里最大的重头戏，这个会放在最后一章，大概是三种时空交错、光怪陆离的幻觉之类的，后面再说。
     </p>
   </article>
+  <Modal ref="S18Modal" />
+  <Tools />
 </template>
-<script setup></script>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S18Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${18}_PAPER`][parseInt(index)];
+  S18Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

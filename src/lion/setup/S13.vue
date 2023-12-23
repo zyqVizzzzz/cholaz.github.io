@@ -5,10 +5,8 @@
       <div>春深居·伍</div>
     </h2>
     <p>
-      春深居，又叫春坊，或神农坊，位于洛阳城北郊。春，即椿，意为无穷；春深居，意为探测无穷的地方。是一家具有医馆性质的中型庄园，由公苏谨和凤秋吟<span
-        class="tip"
-        >（夫妇）</span
-      >共同经营。之所以被称为「春坊」，是因为它和传统的私家园林完全不同，这里更像是一个小型的里坊，大部分活动区域都是生活区，用来收留无家可归的流民和需要长期调养的病人。
+      春深居，又叫春坊，或神农坊，位于洛阳城北郊。春，即椿，意为无穷；春深居，意为探测无穷的地方。是一家具有医馆性质的中型庄园，由公苏谨和凤秋吟夫妇共同经营。之所以被称为「坊」，是因为它和传统的私家园林完全不同，这里更像是一个小型的里坊，大部分活动区域都是生活区，用来收留无家可归的流民和需要长期调养的病人。
+      <span class="desc" @click="handlePaper(0)">【碎片*】</span>
     </p>
     <h4>成员</h4>
     <p>
@@ -34,10 +32,11 @@
     </p>
     <h4>公苏谨</h4>
     <p>
-      公苏谨是二代司天台成员里公认的天才，也是第三代司天台大宗伯的有力竞争者<span
+      公苏谨是二代司天台成员里公认的天才，也是三代司天台大宗伯的候选人<span
         class="tip"
-        >（另外两个竞争者分别是：火道教首方隐游，和现在的司天台大宗伯沈探微）</span
+        >（另外两个候选人分别是：火道道首方隐游，和现在的司天台小宗伯姜探微。大宗伯郭象是后来空降的领导，虽然也是个大佬，但不属于司天台原生体系里的成员）</span
       >。
+      <span class="desc" @click="handlePaper(1)">【碎片*】</span>
     </p>
     <p>
       后来，皇后对司天台进行大清洗，公苏谨因为是刘徽的弟子，一度被列入皇后党的暗杀名单<span
@@ -141,5 +140,18 @@
       >，其他的家人一律不予追究。
     </p>
   </article>
+  <Modal ref="S13Modal" />
+  <Tools />
 </template>
-<script setup></script>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S13Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${13}_PAPER`][parseInt(index)];
+  S13Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

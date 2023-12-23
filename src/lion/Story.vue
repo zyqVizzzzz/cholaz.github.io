@@ -47,8 +47,7 @@ import S16 from "./setup/S16.vue";
 import S17 from "./setup/S17.vue";
 import S18 from "./setup/S18.vue";
 import S19 from "./setup/S19.vue";
-import { ref, reactive } from "vue";
-const { id, title } = defineProps(["id", "title"]);
+const { id } = defineProps(["id"]);
 </script>
 
 <style lang="scss">
@@ -62,20 +61,33 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "LXGW";
+  src: url("./LXGW.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JZXF";
+  src: url("./JZXF.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 main.story {
-  max-width: 640px;
+  max-width: 620px;
   margin: 0 auto;
   position: relative;
-  left: 85px;
-  font-family: "SongTi SC";
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 1px;
+  // left: 85px;
+  font-family: "LXGW";
+  // font-family: "JZXF";
+  // font-family: "MYSXT";
+  // font-family: "SongTi SC";
+  // -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  letter-spacing: 1.7px;
   line-height: 1.2;
   text-align: justify;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
   padding: 60px 0 0px;
   box-sizing: border-box;
   position: relative;
@@ -84,27 +96,22 @@ main.story {
     width: 100%;
     margin-bottom: 30px;
     position: relative;
+    left: 10px;
   }
 
-  .tip-group {
-    position: fixed;
-    font-family: "MYSXT";
-    top: 100px;
-    right: 50px;
-    width: 350px;
-    min-height: 100px;
+  .desc {
+    position: absolute;
+    top: 5px;
+    right: -100px;
+    font-size: 0.8rem;
+    font-weight: 400;
     color: rgba(45, 36, 63, 0.7);
     box-sizing: border-box;
     border-radius: 4px;
-    background: rgba(97, 46, 61, 0.2);
-    padding: 23px 16px 16px 12px;
-  }
-  .tip-title {
-    font-weight: 900;
-    margin-bottom: 15px;
-  }
-  .tip-para {
-    margin: 15px 0;
+    background: rgba(97, 46, 61, 0.1);
+    padding: 3px 10px 0px;
+    border-bottom: 2px solid rgba(97, 46, 61, 0.2);
+    cursor: pointer;
   }
 
   .pagination {
@@ -130,7 +137,7 @@ main.story {
   h2 > div:first-child {
     position: absolute;
     top: -35px;
-    left: -180px;
+    left: -160px;
     width: 2.5rem;
     font-size: 2.5rem;
     font-weight: 900;
@@ -140,7 +147,7 @@ main.story {
   h2 > div:last-child {
     position: absolute;
     top: 5px;
-    left: -150px;
+    left: -130px;
     width: 2.5rem;
     font-size: 2.5rem;
     line-height: 1.5;
@@ -156,10 +163,10 @@ main.story {
     color: rgba(97, 46, 61, 0.5);
   }
 
-  h3,
-  .h3 {
+  h3 {
     font-size: 1.3rem;
     margin: 40px 0 15px;
+    position: relative;
   }
 
   a.mark {
@@ -170,9 +177,8 @@ main.story {
     padding-bottom: 0.3em;
   }
 
-  h4,
-  .h4 {
-    font-size: 1rem;
+  h4 {
+    position: relative;
     background-color: rgb(255, 190, 124);
     display: inline-block;
     margin: 10px -0.4em;
@@ -188,33 +194,33 @@ main.story {
     -webkit-box-decoration-break: clone;
   }
 
-  p,
-  .p {
-    font-size: 1rem;
+  p {
     width: 100%;
     line-height: 1.5;
     margin: 10px 0;
+    position: relative;
   }
   p.label {
     margin: 12px 0;
   }
 
   span.tip {
-    font-family: KaiTi SC;
+    font-family: "KaiTi SC";
     color: rgba(0, 0, 0, 0.5);
-    font-size: 0.95rem;
+    font-size: 15px;
   }
 
   aside {
     border-radius: 4px;
     color: #2d243f;
     box-sizing: border-box;
-    border-radius: 4px;
     background: rgb(241, 241, 239);
-    padding: 26px 16px 13px 12px;
+    padding: 6px 16px 13px 12px;
     position: relative;
-    font-family: KaiTi SC;
+    font-family: "LXGW";
+    // font-style: italic;
     margin: 35px 0;
+    width: 100%;
     &::before {
       content: "“";
       font-family: "MYSXT";
@@ -236,14 +242,13 @@ main.story {
       color: rgba(97, 46, 61, 0.3);
     }
     .aside-title {
-      font-size: 1.7rem;
-      position: absolute;
+      font-size: 1.5rem;
       letter-spacing: 1.5px;
-      top: -2px;
-      left: 15px;
       color: rgba(97, 46, 61, 0.5);
+      padding-left: 10px;
     }
     .aside-para {
+      font-size: 14px;
       padding-left: 10px;
       box-sizing: border-box;
       color: rgba(0, 0, 0, 0.7);

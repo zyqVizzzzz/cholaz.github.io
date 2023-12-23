@@ -4,8 +4,10 @@
       <div>世界观</div>
       <div>名士风潮·贰</div>
     </h2>
+
     <p>
-      前半段故事主要和名士有关，名士就是古代的明星，也是魏晋时代的标志性产物。
+      名士就是古代的明星，也是魏晋时代的标志性产物。
+      <span class="desc" @click="handlePaper(0)">【碎片*】</span>
     </p>
     <h3>成为名士的条件</h3>
     <h4>首先，要有士族血统</h4>
@@ -23,11 +25,15 @@
         class="tip"
         >（门第是决定性的因素）</span
       >。乡品等级代表士子在官僚系统和名士系统里的起点。
+      <span class="desc" @click="handlePaper(1)">【碎片*】</span>
     </p>
     <h4>
       最后，接受名士品藻，从士人变成名士<span class="tip">（面试求职）</span>
     </h4>
-    <p>如果把名士看成一份工作，品藻就相当于求职：</p>
+    <p>
+      如果把名士看成一份工作，品藻就相当于求职：
+      <span class="desc" @click="handlePaper(2)">【碎片*】</span>
+    </p>
     <p>
       士人<span class="tip">（候选人）</span
       >带上自己的作品或自我介绍，主动去找其他名士<span class="tip"
@@ -64,12 +70,21 @@
       <a class="mark">百戏名士</a>： 即庄园培养的名伶<span class="tip"
         >（旗下艺人）</span
       >。传统名士里虽然也有很多人爱好歌舞乐器，但他们不会被归类为百戏名士，百戏名士仅指奴隶出身的伶人。名伶的生活规格和一般名士没有区别，比很多普通士族还要优越。
+      <span class="desc" @click="handlePaper(3)">【碎片*】</span>
     </p>
-    <aside>
-      <p class="aside-title">风骨</p>
-      <p class="aside-para">
-        名士是古代的明星，而风骨是他的明星气质，没有规律可循，也无法批量复制，很多名士虽血统高贵，资源无数，可无论怎样鼓吹营销，都无法让他赢得大众的追捧。而有些人天生就是明星，一举一动都是风骨。
-      </p>
-    </aside>
   </article>
+  <Modal ref="S2Modal" />
+  <Tools />
 </template>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S2Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${2}_PAPER`][parseInt(index)];
+  S2Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

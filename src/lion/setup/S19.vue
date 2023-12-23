@@ -52,5 +52,18 @@
       >。
     </p>
   </article>
+  <Modal ref="S19Modal" />
+  <Tools />
 </template>
-<script setup></script>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S19Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${19}_PAPER`][parseInt(index)];
+  S19Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

@@ -3,6 +3,7 @@
     <h2><div class="story-h2">第八章·月之暗面</div></h2>
     <p>
       穆千穗被陈谊射瞎眼后，人生迅速跌落谷底。她此前能在河阳山墅作威作福，完全是因为她的联姻价值，穆家打算在她十五岁的时候，把她嫁给洛阳贾家。但是贾家听说穆千穗毁容，半张脸都烂了，就立即把这门亲事退了。
+      <span class="desc" @click="handlePaper(0)">【碎片*】</span>
     </p>
     <p>
       此外，皇后<span class="tip">（皇后现在是贾氏的老大）</span
@@ -181,5 +182,18 @@
     <p>穆千穗说：以后别再提起我的脸。</p>
     <p>其实穆千穗喜欢陈谊，只不过不是正常意义的喜欢，他们会有一条感情线。</p>
   </article>
+  <Modal ref="S14Modal" />
+  <Tools />
 </template>
-<script setup></script>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S14Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${14}_PAPER`][parseInt(index)];
+  S14Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

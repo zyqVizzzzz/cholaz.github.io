@@ -9,7 +9,9 @@
         class="mark"
         >门阀、士族、庶族、奴隶、游民</a
       >。
+      <span class="desc" @click="handlePaper(0)">【碎片*】</span>
     </p>
+
     <h3>门阀</h3>
     <p>门阀，即统治者<span class="tip">（皇亲国戚、世家公卿）</span>。</p>
     <h4>寡头政治</h4>
@@ -18,8 +20,9 @@
     <p>
       门阀家族通常会经营一个或数个庄园<span class="tip">（公司）</span
       >，社会上绝大部分的经济活动都是以庄园为中心开展的<span class="tip"
-        >（有些庄园甚至可以私铸货币）</span
-      >。在庄园内部，庄园主就像古代欧洲的领主，拥有无限的权力。庄园内的人口没有国民身份，无需给国家交税，只对庄园主及其家族负责。
+        >（有些庄园甚至可以私铸货币 ）</span
+      >。庄园主在庄园里拥有至高无上的权力。庄园内部的人口没有国民身份，无需给国家交税，只对庄园主及其家族负责。
+      <span class="desc" @click="handlePaper(1)">【碎片*】</span>
     </p>
     <h3>士族</h3>
     <p>
@@ -42,7 +45,7 @@
     </p>
     <h4>从士族到门阀</h4>
     <p>
-      门阀阶层是完全封闭的圈子，普通士族想要成为门阀，唯一的路径就是在政变或战争中找到机会，借助混乱的力量突破重围。
+      门阀阶层是完全封闭的圈子，普通士族想要成为门阀，唯一的路径就是在政变或战争中找到机会，借助混乱的力量洗牌重来。
     </p>
     <h3>庶族</h3>
     <p>
@@ -72,25 +75,22 @@
     </p>
     <h4>奴隶的角色</h4>
     <p>
-      <a class="mark">客民</a>：荫客<span class="tip"
-        >（幕僚家臣，不是奴隶，也不是自由民）</span
+      客民：荫客<span class="tip">（幕僚家臣，不是奴隶，也不是自由民）</span
       >、佃客<span class="tip">（农奴，男奴）</span>、奴客<span class="tip"
         >（奴婢，女奴）</span
       >。
     </p>
     <p>
-      <a class="mark">部曲</a>：良人部曲<span class="tip"
-        >（幕府武士，和荫客类似）</span
+      部曲：良人部曲<span class="tip">（幕府武士，和荫客类似）</span
       >、职业部曲<span class="tip">（雇佣兵）</span>、普通部曲<span class="tip"
         >（身强力壮的农奴）</span
       >。
     </p>
     <p>
-      其他：<a class="mark">歌舞伶人</a
-      ><span class="tip">（艺伎类的奴隶）</span>，<a class="mark">佣耕客</a
-      ><span class="tip">（庶族临时工，来去自由）</span>，<a class="mark"
-        >自卖人</a
-      ><span class="tip"
+      其他：歌舞伶人
+      <span class="tip">（艺伎类的奴隶）</span>，佣耕客
+      <span class="tip">（庶族临时工，来去自由）</span>， 自卖人<span
+        class="tip"
         >（庶族临时工，和庄园有债务关系，还清债务后恢复自由民身份）</span
       >。
     </p>
@@ -120,6 +120,21 @@
     <h4>游民脱离正常的社会系统</h4>
     <p>
       游民被杀官府不受理，游民犯任何罪都会被立即问斩，同时游民又不被允许从事合法的工作，所以游民随时随地都会面临死亡的威胁。如果奴隶是家养动物，游民就是生活在丛林里的野狗，适者生存，每个游民都要不惜一切代价地活下去，每个能活下去的游民都必然有一套独特的生存法则。游民一无所有，只有最险恶的自由。
+      <span class="desc" @click="handlePaper(2)">【碎片*】</span>
     </p>
   </article>
+  <Modal ref="S1Modal" />
+  <Tools />
 </template>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S1Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${1}_PAPER`][parseInt(index)];
+  S1Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

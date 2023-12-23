@@ -78,17 +78,17 @@
     <h3>神像</h3>
     <p>神像是火神宗的核心概念，共有三座<span class="tip">（三弥神）</span>：</p>
     <h4>阿莎力、代敏、奥雅</h4>
-    <p>功能：存储能量，控制教徒。</p>
-    <h4>
+    <p>功能：<a class="mark">存储能量，控制教徒</a>。</p>
+    <p>
       存储能量：能量即「道」，能量的多寡将决定天命。火神宗目前正在四处寻找蕴含着能量的法器，然后用神像吸收并存储这些能量。能量积累到一定程度之后，他们才可以启动解放九黎神的计划。
-    </h4>
-    <h4>
+    </p>
+    <p>
       控制教徒：三座神像同时还有各自的专属功能。奥雅：九头八臂，庇佑教徒并为教徒分发奖励。代敏：鹰首人身，执行惩罚。阿莎力：主神，浑身长眼，硕大的耳朵，能力是聆听众生，以及无孔不入的监视。
-    </h4>
-    <h4>
+    </p>
+    <p>
       火神宗教徒数量越多<span class="tip">（香火越旺）</span
       >，神像的力量就越强。
-    </h4>
+    </p>
     <h4>落星仙子<span class="tip">（侍法人）</span></h4>
     <p>
       侍法人就是被阿莎力附身过的人<span class="tip">（都是女性）</span
@@ -161,5 +161,18 @@
       第八章的结尾，陆山黛被穆千穗盯上了，她会去陈谊介绍的医馆找张道医，张道医会引诱她成为瞳朦子。但是，殷伏黎却在陆山黛入道后，让薛巧人给自己易容，顶替陆山黛参加了巡香考核。然后故事就正式进入殷伏黎和穆千穗的对决阶段了。
     </p>
   </article>
+  <Modal ref="S17Modal" />
+  <Tools />
 </template>
-<script setup></script>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S17Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${17}_PAPER`][parseInt(index)];
+  S17Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

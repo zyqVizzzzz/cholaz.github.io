@@ -14,7 +14,7 @@
     </p>
     <p>
       殷伏黎<span class="tip">（疯子炼丹师）</span
-      >：汉尼拔人设，陆小乙是嘲弄，殷伏黎是身体力行的破坏，破坏秩序、破坏道德、破坏人间万物，大概是这种感觉：我会像赴宴一样迎接死亡。或者这种：殷伏黎对穆千穗表达过爱意，她说我不会对你说沅有芷兮澧有兰，我会直接为你万死碎绮翼。
+      >：发条橙人设，陆小乙是嘲弄，殷伏黎是身体力行的破坏，破坏秩序、破坏道德、破坏人间万物，大概是这种感觉：我会像赴宴一样迎接死亡。
     </p>
     <p>
       穆千穗<span class="tip">（支配女王）</span
@@ -85,5 +85,18 @@
     </p>
     <p>最后，具体剧情不讲了，介绍几个设定。</p>
   </article>
+  <Modal ref="S16Modal" />
+  <Tools />
 </template>
-<script setup></script>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S16Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${16}_PAPER`][parseInt(index)];
+  S16Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

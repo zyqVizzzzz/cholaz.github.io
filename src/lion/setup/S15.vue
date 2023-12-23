@@ -135,5 +135,18 @@
       >死而复生，成为殷伏黎。
     </p>
   </article>
+  <Modal ref="S15Modal" />
+  <Tools />
 </template>
-<script setup></script>
+<script setup>
+import Modal from "../Modal.vue";
+import Tools from "./Tools.vue";
+import * as PAPER from "./Paper.js";
+import { ref } from "vue";
+const S15Modal = ref(null);
+
+function handlePaper(index) {
+  const data = PAPER[`S${15}_PAPER`][parseInt(index)];
+  S15Modal.value.openModal(data.paras); // 调用子组件方法
+}
+</script>

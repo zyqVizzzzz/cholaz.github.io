@@ -1,0 +1,43 @@
+<template>
+  <div class="tools" @click="openTextOpt"><div>碎片机器</div></div>
+  <text-trans ref="TModal" />
+</template>
+<script setup>
+import TextTrans from "./TextTrans.vue";
+import { ref } from "vue";
+const TModal = ref(null);
+function openTextOpt() {
+  TModal.value.openModal(1); // 调用子组件方法
+}
+</script>
+<style scoped>
+@font-face {
+  font-family: "MYSXT";
+  src: url("./mysxt.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+.tools {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  width: 40px;
+  /* height: 50px; */
+  padding: 10px 0;
+  border-radius: 10px;
+  background: rgba(97, 46, 61, 0.1);
+  color: rgba(45, 36, 63, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+  font-family: "MYSXT";
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+div {
+  width: 15px;
+}
+</style>
