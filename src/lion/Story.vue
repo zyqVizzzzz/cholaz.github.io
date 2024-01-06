@@ -273,12 +273,6 @@ main.story {
 @media (max-width: 900px) {
   main.story {
     max-width: 540px;
-    h2 > div:first-child {
-      left: -110px;
-    }
-    h2 > div:last-child {
-      left: -90px;
-    }
     .desc {
       display: none;
     }
@@ -286,13 +280,8 @@ main.story {
 }
 @media (max-width: 400px) {
   main.story {
-    max-width: 320px;
-    h2 > div:first-child {
-      left: -110px;
-    }
-    h2 > div:last-child {
-      left: -90px;
-    }
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 </style>
