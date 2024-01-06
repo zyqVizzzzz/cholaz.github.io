@@ -279,6 +279,9 @@ main.story {
     h2 > div:last-child {
       left: -90px;
     }
+    .desc {
+      display: none;
+    }
   }
 }
 @media (max-width: 400px) {

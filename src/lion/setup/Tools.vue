@@ -30,6 +30,11 @@ function openTextOpt() {
   background: #fff;
   border-radius: 10px;
 }
+@media (max-width: 900px) {
+  .tool-container {
+    display: none;
+  }
+}
 .tools {
   width: 40px;
   /* height: 50px; */
