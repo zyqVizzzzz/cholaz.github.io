@@ -1,5 +1,8 @@
 <template>
-  <div class="tools" @click="openTextOpt"><div>碎片机器</div></div>
+  <div class="tool-container">
+    <div class="tools" @click="openTextOpt"><div>碎片机器</div></div>
+  </div>
+
   <text-trans ref="TModal" />
 </template>
 <script setup>
@@ -17,10 +20,17 @@ function openTextOpt() {
   font-weight: normal;
   font-style: normal;
 }
-.tools {
+.tool-container {
+  background: #000;
   position: fixed;
   top: 50%;
   right: 20px;
+  transform: translateY(-50%);
+  width: 40px;
+  background: #fff;
+  border-radius: 10px;
+}
+.tools {
   width: 40px;
   /* height: 50px; */
   padding: 10px 0;
@@ -31,7 +41,7 @@ function openTextOpt() {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transform: translateY(-50%);
+
   font-family: "MYSXT";
   font-weight: 400;
   letter-spacing: 2px;

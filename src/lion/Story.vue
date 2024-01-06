@@ -73,30 +73,40 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "FKH";
+  src: url("/lion/FKH.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 main.story {
-  max-width: 620px;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
   // left: 85px;
-  font-family: "LXGW";
+  // font-family: "LXGW";
   // font-family: "JZXF";
-  // font-family: "MYSXT";
+  font-family: "MYSXT";
   // font-family: "SongTi SC";
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   font-size: 15px;
   letter-spacing: 1.7px;
-  line-height: 1.2;
+  line-height: 1.4;
   text-align: justify;
   padding: 60px 0 0px;
   box-sizing: border-box;
   position: relative;
 
   article {
-    width: 100%;
+    // width: 60%;
     margin-bottom: 30px;
     position: relative;
     left: 10px;
+  }
+  .article {
+    width: 600px;
+    margin: 0 auto;
   }
 
   .desc {
@@ -130,29 +140,28 @@ main.story {
   }
 
   h2 {
+    font-size: 1.5rem;
+    margin: 30px 0;
+    font-family: "LXGW";
+  }
+
+  h1 {
     font-size: 2.5rem;
     margin: 30px 0;
     position: fixed;
+    font-family: "LXGW";
   }
-  h2 > div:first-child {
+  h1 > div {
     position: absolute;
-    top: -35px;
-    left: -160px;
+    top: 5px;
+    left: -130px;
     width: 2.5rem;
     font-size: 2.5rem;
     font-weight: 900;
     line-height: 1.5;
     color: rgba(97, 46, 61, 0.5);
   }
-  h2 > div:last-child {
-    position: absolute;
-    top: 5px;
-    left: -130px;
-    width: 2.5rem;
-    font-size: 2.5rem;
-    line-height: 1.5;
-  }
-  h2 > .story-h2 {
+  h1 > .story-h2 {
     position: absolute;
     top: -35px;
     left: -150px;
@@ -165,13 +174,14 @@ main.story {
 
   h3 {
     font-size: 1.3rem;
-    margin: 40px 0 15px;
+    margin: 30px 0 15px;
     position: relative;
+    font-weight: 400;
   }
 
   a.mark {
     color: inherit;
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='%23612e3d80' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='5' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='%23612e3d80' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
       bottom left/100% 0.3em no-repeat;
     text-decoration: none;
     padding-bottom: 0.3em;
@@ -179,35 +189,40 @@ main.story {
 
   h4 {
     position: relative;
-    background-color: rgb(255, 190, 124);
     display: inline-block;
-    margin: 10px -0.4em;
+    margin: 5px -0.4em 0px;
     padding: 0.1em 0.4em;
-    border-radius: 0.8em 0.3em;
+    border-radius: 0.3em 0.2em;
     background: transparent;
     background-image: linear-gradient(
       to right,
-      rgba(97, 46, 61, 0.05),
-      rgba(97, 46, 61, 0.5) 4%,
-      rgba(97, 46, 61, 0.2)
+      rgba(131, 63, 61, 0.1),
+      rgba(131, 63, 61, 0.3) 30%,
+      rgba(131, 63, 83, 0.1)
     );
     -webkit-box-decoration-break: clone;
+    color: rgb(18, 18, 18);
+    font-weight: 500;
   }
 
   p {
     width: 100%;
-    line-height: 1.5;
-    margin: 10px 0;
+    line-height: 1.6;
+    margin: 15px 0;
     position: relative;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 0.4px;
+    text-decoration-color: rgb(221, 216, 223);
   }
   p.label {
     margin: 12px 0;
   }
 
   span.tip {
-    font-family: "KaiTi SC";
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 15px;
+    // font-family: "KaiTi SC";
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 12px;
   }
 
   aside {
@@ -252,6 +267,28 @@ main.story {
       padding-left: 10px;
       box-sizing: border-box;
       color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+@media (max-width: 900px) {
+  main.story {
+    max-width: 540px;
+    h2 > div:first-child {
+      left: -110px;
+    }
+    h2 > div:last-child {
+      left: -90px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  main.story {
+    max-width: 320px;
+    h2 > div:first-child {
+      left: -110px;
+    }
+    h2 > div:last-child {
+      left: -90px;
     }
   }
 }

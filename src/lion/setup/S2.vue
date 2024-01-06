@@ -1,7 +1,6 @@
 <template>
   <article>
     <h2>
-      <div>世界观</div>
       <div>名士风潮·贰</div>
     </h2>
 

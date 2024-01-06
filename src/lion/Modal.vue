@@ -229,6 +229,7 @@ export default {
   padding-top: 10px;
   padding-bottom: 10px;
   margin: 0;
+  text-decoration: none;
   /* font-family: "MYSXT"; */
   /* font-family: "Kaiti SC"; */
   font-weight: 200;

@@ -13,7 +13,7 @@ const chapterList = [
   { title: "世界观：司天台", tag: "world", path: "/lion/11" },
   { title: "第七章：破空画影", tag: "story", path: "/lion/12" },
   { title: "世界观：春深居", tag: "world", path: "/lion/13" },
-  { title: "第八章：月之暗面", tag: "story", path: "/lion/14" },
+  { title: "第八章：淑女的眼泪", tag: "story", path: "/lion/14" },
   { title: "后记：未完待续", tag: "other", path: "/lion/15" },
   { title: "人物手册", tag: "other", path: "/lion/16" },
   { title: "世界观：瞳朦子", tag: "world", path: "/lion/17" },
@@ -31,6 +31,7 @@ const chapterList = [
   </head>
   <body>
     <ul>
+      <h1 class="title">狮子击象</h1>
       {
         chapterList.map((item) => (
           <li>
@@ -47,6 +48,11 @@ const chapterList = [
         margin: 0;
         padding: 0;
         font-family: "SongTi SC";
+      }
+      .title {
+        font-size: 32px;
+        margin-bottom: 30px;
+        letter-spacing: 4px;
       }
       ul {
         height: 100vh;

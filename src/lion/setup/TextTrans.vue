@@ -9,8 +9,9 @@
       <div class="modal-inset">
         <div class="modal-body">
           <textarea v-model="data.text" id="T_TRANS"></textarea>
-          <button @click="closeModal">关闭</button>
-          <button @click="handleText">格式转换</button>
+          <button @click="handleText">正文转换</button>
+          <button @click="handlePaper">碎片转换</button>
+          <button @click="closeModal">关闭窗口</button>
         </div>
       </div>
     </div>
@@ -39,6 +40,12 @@ export default {
         if (!line.trim()) {
           return; // 如果文本为空，直接跳过不处理
         }
+        console.log(line);
+
+        line = line.replace(/（/g, '<span class="tip">（');
+        line = line.replace(/）/g, "）</span>");
+        line = line.replace(/【/g, '<a class="mark">');
+        line = line.replace(/】/g, "</a>");
         if (line.startsWith("## ")) {
           result.push({ t: "h2", c: line.substring(3) });
         } else if (line.startsWith("### ")) {
@@ -66,6 +73,18 @@ export default {
       return element;
     };
 
+    const handlePaper = () => {
+      const result = {
+        id: parseInt(data.text.match(/\d+/)[0]), // Extracting the ID from the text
+        paras: data.text
+          .trim()
+          .split(/\n\n/)
+          .slice(1)
+          .map((para) => para.trim()) // Splitting text into paragraphs
+      };
+      data.text = JSON.stringify(result);
+    };
+
     const openModal = (context) => {
       data.text = "";
       overlayVisible.value = true;
@@ -82,6 +101,7 @@ export default {
     return {
       data,
       handleText,
+      handlePaper,
       overlayVisible,
       overlayRef,
       modalVisible,
@@ -125,6 +145,7 @@ textarea {
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
   padding: 20px;
   font-family: "MYSXT";
+  text-align: justify;
   font-size: 15px;
   letter-spacing: 2;
   -webkit-font-smoothing: antialiased;
