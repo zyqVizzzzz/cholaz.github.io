@@ -1,52 +1,22 @@
 <template>
   <main class="story">
-    <S1 v-if="parseInt(id) === 1" />
-    <S2 v-if="parseInt(id) === 2" />
-    <S3 v-if="parseInt(id) === 3" />
-    <S4 v-if="parseInt(id) === 4" />
-    <S5 v-if="parseInt(id) === 5" />
-    <S6 v-if="parseInt(id) === 6" />
-    <S7 v-if="parseInt(id) === 7" />
-    <S8 v-if="parseInt(id) === 8" />
-    <S9 v-if="parseInt(id) === 9" />
-    <S10 v-if="parseInt(id) === 10" />
-    <S11 v-if="parseInt(id) === 11" />
-    <S12 v-if="parseInt(id) === 12" />
-    <S13 v-if="parseInt(id) === 13" />
-    <S14 v-if="parseInt(id) === 14" />
-    <S15 v-if="parseInt(id) === 15" />
-    <S16 v-if="parseInt(id) === 16" />
-    <S17 v-if="parseInt(id) === 17" />
-    <S18 v-if="parseInt(id) === 18" />
-    <S19 v-if="parseInt(id) === 19" />
+    <S20 v-if="parseInt(id) === 20" />
+    <S21 v-if="parseInt(id) === 21" />
+    <S22 v-if="parseInt(id) === 22" />
+    <S23 v-if="parseInt(id) === 23" />
     <div class="pagination">
-      <a v-if="id > 1" :href="`/lion/${id - 1}`">上一页</a>
+      <a v-if="id > 20" :href="`/lion/${id - 1}`">上一页</a>
       <a href="/lion">返回目录</a>
-      <a v-if="id < 19" :href="`/lion/${id + 1}`">下一页</a>
+      <a v-if="id < 23" :href="`/lion/${id + 1}`">下一页</a>
     </div>
   </main>
 </template>
 
 <script setup>
-import S1 from "./setup/S1.vue";
-import S2 from "./setup/S2.vue";
-import S3 from "./setup/S3.vue";
-import S4 from "./setup/S4.vue";
-import S5 from "./setup/S5.vue";
-import S6 from "./setup/S6.vue";
-import S7 from "./setup/S7.vue";
-import S8 from "./setup/S8.vue";
-import S9 from "./setup/S9.vue";
-import S10 from "./setup/S10.vue";
-import S11 from "./setup/S11.vue";
-import S12 from "./setup/S12.vue";
-import S13 from "./setup/S13.vue";
-import S14 from "./setup/S14.vue";
-import S15 from "./setup/S15.vue";
-import S16 from "./setup/S16.vue";
-import S17 from "./setup/S17.vue";
-import S18 from "./setup/S18.vue";
-import S19 from "./setup/S19.vue";
+import S20 from "./setup/S20.vue";
+import S21 from "./setup/S21.vue";
+import S22 from "./setup/S22.vue";
+import S23 from "./setup/S23.vue";
 const { id } = defineProps(["id"]);
 </script>
 
@@ -87,8 +57,8 @@ main.story {
   // left: 85px;
   // font-family: "LXGW";
   // font-family: "JZXF";
-  font-family: "MYSXT";
-  // font-family: "SongTi SC";
+  // font-family: "MYSXT";
+  font-family: "SongTi SC";
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   letter-spacing: 1.7px;
@@ -100,7 +70,7 @@ main.story {
 
   article {
     // width: 60%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative;
     left: 10px;
   }
@@ -112,7 +82,7 @@ main.story {
   .desc {
     position: absolute;
     top: 5px;
-    right: -100px;
+    right: -85px;
     font-size: 0.8rem;
     font-weight: 400;
     color: rgba(45, 36, 63, 0.7);
@@ -140,23 +110,27 @@ main.story {
   }
 
   h2 {
-    font-size: 1.5rem;
-    margin: 30px 0;
-    font-family: "LXGW";
+    font-size: 24px;
+    margin: 20px 0 20px -2px;
+    // font-family: "LXGW";
+    font-family: "SongTi SC";
+    font-weight: 900;
+    // color: rgba(97, 46, 61, 0.5);
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 32px;
     margin: 30px 0;
     position: fixed;
-    font-family: "LXGW";
+    // font-family: "LXGW";
+    font-family: "SongTi SC";
   }
   h1 > div {
     position: absolute;
     top: 5px;
     left: -130px;
     width: 2.5rem;
-    font-size: 2.5rem;
+    font-size: 32px;
     font-weight: 900;
     line-height: 1.5;
     color: rgba(97, 46, 61, 0.5);
@@ -166,17 +140,17 @@ main.story {
     top: -35px;
     left: -150px;
     width: 2.5rem;
-    font-size: 2.5rem;
+    font-size: 32px;
     font-weight: 900;
     line-height: 1.5;
     color: rgba(97, 46, 61, 0.5);
   }
 
   h3 {
-    font-size: 1.3rem;
-    margin: 30px 0 15px;
+    font-size: 20px;
+    margin: 20px 0 15px;
     position: relative;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   a.mark {
@@ -226,47 +200,52 @@ main.story {
   }
 
   aside {
-    border-radius: 4px;
+    border-radius: 10px;
     color: #2d243f;
     box-sizing: border-box;
-    background: rgb(241, 241, 239);
-    padding: 6px 16px 13px 12px;
+    border-left: 2px solid rgba(97, 46, 61, 0.5);
+    background: rgba(97, 46, 61, 0.05);
+    padding: 12px 12px 5px 2px;
     position: relative;
-    font-family: "LXGW";
-    // font-style: italic;
-    margin: 35px 0;
-    width: 100%;
-    &::before {
-      content: "“";
-      font-family: "MYSXT";
-      font-size: 2rem;
-      position: absolute;
-      top: 50%;
-      left: -50px;
-      transform: translateY(-100%);
-      color: rgba(97, 46, 61, 0.3);
-    }
-    &::after {
-      content: "”";
-      font-family: "MYSXT";
-      font-size: 2rem;
-      position: absolute;
-      top: 50%;
-      right: -50px;
-      transform: translateY(50%);
-      color: rgba(97, 46, 61, 0.3);
-    }
-    .aside-title {
-      font-size: 1.5rem;
-      letter-spacing: 1.5px;
-      color: rgba(97, 46, 61, 0.5);
-      padding-left: 10px;
-    }
-    .aside-para {
+    margin: 20px 0 20px -12px;
+    width: 612px;
+    // &::before {
+    //   content: "“";
+    //   font-family: "MYSXT";
+    //   font-size: 2rem;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: -50px;
+    //   transform: translateY(-100%);
+    //   color: rgba(105, 104, 104, 0.9);
+    // }
+    // &::after {
+    //   content: "”";
+    //   font-family: "MYSXT";
+    //   font-size: 2rem;
+    //   position: absolute;
+    //   top: 50%;
+    //   right: -50px;
+    //   transform: translateY(50%);
+    //   color: rgba(105, 104, 104, 0.9);
+    // }
+    p {
       font-size: 14px;
       padding-left: 10px;
       box-sizing: border-box;
-      color: rgba(0, 0, 0, 0.7);
+      text-decoration: none;
+      margin: 5px 0 10px;
+      span.tip {
+        font-size: 12px;
+      }
+    }
+    p.aside-title {
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      // position: relative;
+      // left: 10px;
+      text-decoration: none;
+      margin: 5px 0;
     }
   }
 }
