@@ -3,20 +3,17 @@ import Icon from './Icon.astro';
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Industry Leader</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Strategy-Minded</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+	<div class="stack lg:gap-4">
+		<p>Agent.Z - Code Version</p>
+		<p>Front-End Engineer</p>
+		<p>7 Years Development Experience</p>
+		<p>Hangzhou, China</p>
+		<div class="underline"></div>
+		<div class="roles">      
+      <Icon icon="github-logo" size="1.33em" />
+      <Icon icon="email" size="1.33em" />
+      <Icon icon="twitter-logo" size="1.33em" />
+    </div>
 	</div>
 </section>
 
@@ -28,6 +25,14 @@ import Icon from './Icon.astro';
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}
+	.roles{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.underline{
+		border-bottom: 1px solid var(--gray-800)
+	}
 
 	.skills {
 		display: flex;
@@ -37,6 +42,8 @@ import Icon from './Icon.astro';
 
 	.skills h2 {
 		font-size: var(--text-lg);
+		display: flex;
+		align-items: center;
 	}
 
 	.skills p {
@@ -51,7 +58,6 @@ import Icon from './Icon.astro';
 
 		.skills {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
 			gap: 5rem;
 		}
 

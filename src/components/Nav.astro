@@ -7,9 +7,8 @@ import { LanguageSelector } from "astro-i18next/components";
 const textLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/home/" },
   { label: "Work", href: "/work/" },
-  // { label: "Article", href: "/article/"},
-  { label: "Experience", href: "/experience/" },
-  { label: "Ground", href: "/ground/" }
+  { label: "Article", href: "/article/"},
+  // { label: "Experience", href: "/blog/" }
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -36,7 +35,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
         size="1.6em"
         gradient
       />
-      Chola.Z
+      Agent.Z
     </a>
     <menu-button>
       <template>
@@ -299,7 +298,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 
     .link:hover,
     .link:focus {
-      color: var(--gray-100);
+      color: #fff;
       background-color: var(--accent-subtle-overlay);
     }
 
