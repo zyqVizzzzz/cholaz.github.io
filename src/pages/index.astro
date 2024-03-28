@@ -1,8 +1,21 @@
 ---
+import MainHead from '../components/MainHead.astro';
+import i18next, { t } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+interface Props {
+	title?: string | undefined;
+	description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-
+<html lang={i18next.language}>
+	<head>
+		<MainHead title={title} description={description} />
+	</head>
+  <body>
 <article>
 <main>Hi! It's Agent Z here. </main>
 <nav>
@@ -44,3 +57,5 @@
     color: #222;
   }
 </style>
+	</body>
+</html>
